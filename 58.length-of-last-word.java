@@ -6,15 +6,20 @@
 
 // @lc code=start
 class Solution {
-    public int lengthOfLastWord(String s) {
+    public int lengthOfLastWord(String ss) {
 
 
-
-      String [] t =  s.split(" ");
-      return t[t.length-1].length();
-      
-     
-
+   String s = ss.trim();
+          int l = s.length();
+       
+        for(int i =l-1; i>=0;i--){
+            if(s.charAt(i)==' '){
+                return l-1-i;
+            }
+        else if(i== 0)
+            return l;
+        }
+     return -1;
     }
 }
 // @lc code=end
