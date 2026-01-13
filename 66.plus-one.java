@@ -7,41 +7,21 @@
 // @lc code=start
 class Solution {
     public int[] plusOne(int[] digits) {
-        int l = digits.length-1;
-         Integer t=0;
-         int a,b,c=0,ll=0;
-         int[]  arr ={};
-         
-         
-        if(digits[l]!=9){
-            digits[l] +=1;
-            return digits;
+        int l = digits.length;
+
+        for(int i =l-1; i>=0;i--){
+             
+            digits[i]++;
+            if(digits[i]<10) return digits;
+             digits[i]=0;
         }
-        else{
-            if(l==0){
-                arr[0]=1;
-                arr[1]=0;
-                return arr;
-            }
+        digits = new int[l+1];
+        digits[0]= 1;
 
-            for(int i : digits){
+        return digits;
 
-              t= t*10 +i;
-            }
-            t=t+1;
-            b= t.reverse(t);
-            while(b>0){
-           
-             a=b%10;
-             arr[ll]= a;
-             ll++;
-         //    c = c*10+a;
-             b=b/10;
-            }
-          
-return arr;
-
-        }
+        
+        
         
     }
 }
