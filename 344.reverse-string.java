@@ -18,7 +18,7 @@ class Solution {
         }
 
 
-        for (int i =s.length-1; i>=mid; i--){
+        for (int i = s.length-1; i>=mid; i--){
             
             temp = s[ss];
             s[ss]= s[i];
