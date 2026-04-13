@@ -7,8 +7,9 @@
 // @lc code=start
 class Solution {
     public int reverseBits(int n) {
-
-        
+                
+               
+               
     }
 }
 // @lc code=end
